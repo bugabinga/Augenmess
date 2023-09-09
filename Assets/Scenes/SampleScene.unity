@@ -839,7 +839,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 655831808}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 683077769}
+        m_TargetAssemblyTypeName: LevelState, Assembly-CSharp
+        m_MethodName: buttonCPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &655831808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -878,6 +890,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 655831805}
   m_CullTransparentMesh: 1
+--- !u!1 &683077766
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 683077768}
+  - component: {fileID: 683077769}
+  m_Layer: 0
+  m_Name: LevelState
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &683077768
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 683077766}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 60.647793, y: 131.42068, z: 4.411565}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &683077769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 683077766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddb941d911cd4984ea88b00a29e37b19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  referenceLine: {fileID: 342403967}
+  choiceLineA: {fileID: 1716833097}
+  choiceLineB: {fileID: 1669780091}
+  choiceLineC: {fileID: 568289184}
 --- !u!1 &908710466
 GameObject:
   m_ObjectHideFlags: 0
@@ -960,7 +1020,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 908710469}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 683077769}
+        m_TargetAssemblyTypeName: LevelState, Assembly-CSharp
+        m_MethodName: buttonAPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &908710469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1010,7 +1082,7 @@ GameObject:
   - component: {fileID: 909596830}
   - component: {fileID: 909596829}
   m_Layer: 0
-  m_Name: Audio Source
+  m_Name: Stress Musik
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1026,11 +1098,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: b1156a5820c20cec2a65f90e7323e90e, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.256
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1121,7 +1193,7 @@ Transform:
   m_GameObject: {fileID: 909596828}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 60.647793, y: 131.42068, z: 4.411565}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1209,7 +1281,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1184200313}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 683077769}
+        m_TargetAssemblyTypeName: LevelState, Assembly-CSharp
+        m_MethodName: buttonBPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1184200313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1741,7 +1825,7 @@ GameObject:
   - component: {fileID: 1937003300}
   - component: {fileID: 1937003299}
   m_Layer: 0
-  m_Name: Canvas
+  m_Name: Buttons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1882,3 +1966,4 @@ SceneRoots:
   - {fileID: 568289185}
   - {fileID: 1190953838}
   - {fileID: 909596830}
+  - {fileID: 683077768}
