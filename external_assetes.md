@@ -2,5 +2,5 @@
 - Music
   - chill: https://pixabay.com/music/dramatic-classical-cinematic-soundtrack-dark-cathedral-874/
   - stress: https://pixabay.com/music/beats-miyagisama-gotham-city-cinematic-dark-dangerous-9801/
-- Character: https://kenney.nl/assets/modular-characters
+- Character: https://szadiart.itch.io/rpg-main-character
 - Glocke: https://pixabay.com/vectors/america-american-bell-history-july-1297066/
