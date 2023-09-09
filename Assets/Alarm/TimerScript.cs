@@ -17,17 +17,16 @@ public class TimerScript : MonoBehaviour
     void Start()
     {
         oldTime = Time.time;
-        audioSource.Play();
-        audioSource.time = 135.9f;
         StopAllCoroutines();
         StartCoroutine(Shake());
+        audioSource.time = 135.9f;
+        audioSource.Play();
+        kreis.fillAmount = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-     
-
         var newTime = Time.time;
         if(newTime > oldTime + 1)
         {

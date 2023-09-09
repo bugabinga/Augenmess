@@ -31,7 +31,7 @@ public class ProgressBarScript : MonoBehaviour
     private void Update()
     {
         //TODO: REMOVE, das ist nur als Test da drin
-        if (Time.frameCount % 2000 == 0)
+        if (Time.frameCount % 200 == 0)
         {
             updateProgressBar(2, 1);
         }
