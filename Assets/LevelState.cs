@@ -11,6 +11,7 @@ public class LevelState : MonoBehaviour
     public LineRenderer choiceLineB;
     public LineRenderer choiceLineC;
     public GameObject gameOver;
+    public Camera camera1;
     
     private bool anAnswerWasGiven = false;
     private bool correctAnswerGiven = false;
@@ -18,6 +19,7 @@ public class LevelState : MonoBehaviour
     private Gradient correct;
     private Gradient incorrect;
     GameStateManager.gameState gameStatus = GameStateManager.gameState.RUNNING;
+
 
     // Start is called before the first frame update
     void Start()
@@ -64,6 +66,7 @@ public class LevelState : MonoBehaviour
         anAnswerWasGiven = true;
         correctAnswerGiven = false;
         gameStatus = ProgressBarScript.updateProgressBar(1, 0);
+        camera1.GetComponent<ShakyCam>().TriggerShake();
         choiceLineA.colorGradient = incorrect;
     }
    
@@ -83,6 +86,8 @@ public class LevelState : MonoBehaviour
        anAnswerWasGiven = true;
        correctAnswerGiven = false;
         gameStatus = ProgressBarScript.updateProgressBar(1, 0);
+        camera1.GetComponent<ShakyCam>().TriggerShake();
+
         choiceLineC.colorGradient = incorrect;
    }
 
