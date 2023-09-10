@@ -11,10 +11,10 @@ public class ShakyCam : MonoBehaviour
     private float shakeDuration = 0f;
 
     // A measure of magnitude for the shake. Tweak based on your preference
-    private float shakeMagnitude = 0.7f;
+    private float shakeMagnitude = 1.7f;
 
     // A measure of how quickly the shake effect should evaporate
-    private float dampingSpeed = 1.0f;
+    private float dampingSpeed = 2.0f;
 
     // The initial position of the GameObject
     Vector3 initialPosition;
@@ -55,7 +55,7 @@ public class ShakyCam : MonoBehaviour
 
     public void TriggerShake()
     {
-        shakeDuration = 2.0f;
+        shakeDuration = 1.0f;
     }
 
 }

@@ -11,6 +11,7 @@ public class LevelState : MonoBehaviour
     public LineRenderer choiceLineB;
     public LineRenderer choiceLineC;
     public GameObject gameOver;
+    public GameObject gameGeschafft;
     public Camera camera1;
     
     private bool anAnswerWasGiven = false;
@@ -45,14 +46,16 @@ public class LevelState : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(anAnswerWasGiven)
+        if (anAnswerWasGiven)
         {
-            if(correctAnswerGiven)
+            if (correctAnswerGiven)
             {
+                Time.timeScale = 0f;
+                gameGeschafft.SetActive(true);
                 print("you won!");
             }
         }
-        if(gameStatus == GameStateManager.gameState.GAMEOVERCAUGHT)
+        if (gameStatus == GameStateManager.gameState.GAMEOVERCAUGHT)
         {
             Time.timeScale = 0f;
             gameOver.SetActive(true);
