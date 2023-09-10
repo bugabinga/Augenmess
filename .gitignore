@@ -74,5 +74,4 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
 UnityPlayer.so
-augenmess.x86_64
 augenmess_BurstDebugInformation_DoNotShip
