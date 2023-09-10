@@ -262,7 +262,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 31.8
-  m_Text: "Augen-Ma\xDF"
+  m_Text: Augenmess
 --- !u!222 &344142070
 CanvasRenderer:
   m_ObjectHideFlags: 0
