@@ -11,6 +11,7 @@ public class TimerScript : MonoBehaviour
     public Image kreisHintergrund;
     public AudioSource audioSource;
     public SpriteRenderer bell;
+    public GameObject gameOver;
     float oldTime;
     bool over = false;
     // Start is called before the first frame update
@@ -38,21 +39,37 @@ public class TimerScript : MonoBehaviour
                 if (!over)
                 {
                     Destroy(bell);
-                    audioSource.time = 128.1f;
-                    audioSource.Play();
-
+                    stopTimer();
+                    var state = ProgressBarScript.updateProgressBar(3, 0); 
+                    if( state == GameStateManager.gameState.GAMEOVERCAUGHT)
+                    {
+                        Time.timeScale = 0f;
+                        gameOver.SetActive(true);
+                        print("GameOver");
+                    }
                 }
                 over = true;
                 if(sekunden - MAXSEKUNDEN> 6)
-                {
-                    audioSource.Stop();
+                { 
                     Destroy(this);
                 }
-               
             }
             kreis.fillAmount = sekunden / MAXSEKUNDEN;
         }
         
+    }
+
+    public void stopTimer()
+    {
+        StartCoroutine("PlayFor5Seconds");
+    }
+
+    IEnumerator PlayFor5Seconds()
+    {
+        audioSource.time = 128.1f;
+        audioSource.Play();
+        yield return new WaitForSeconds(5);
+        audioSource.Stop();
     }
 
     [Header("Info")]

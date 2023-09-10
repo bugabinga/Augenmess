@@ -5,13 +5,13 @@ using UnityEngine;
 public class ProgressBarScript : MonoBehaviour
 {
     // Start is called before the first frame update
-    int maxProgress = 30;
-    int currentCrossProgress = 0;
-    int currentPlayerProgress = 6;
-    float size;
-    float stepSize;
-    Transform cross;
-    Transform player;
+    static int maxProgress = 30;
+    static int currentCrossProgress = 0;
+    static int currentPlayerProgress = 6;
+    static float size;
+    static float stepSize;
+    static Transform cross;
+    static Transform player;
 
 
     void Start()
@@ -24,22 +24,16 @@ public class ProgressBarScript : MonoBehaviour
 
         cross.Translate( currentCrossProgress * stepSize, 0, 0);
         player.Translate(currentPlayerProgress * stepSize, 0, 0);
-
     }
 
     // Update is called once per frame
     private void Update()
     {
-        //TODO: REMOVE, das ist nur als Test da drin
-        if (Time.frameCount % 200 == 0)
-        {
-            updateProgressBar(2, 1);
-        }
        
     }
 
 
-    public GameStateManager.gameState updateProgressBar( int crossUpdate, int playerUpdate)
+    public static GameStateManager.gameState updateProgressBar( int crossUpdate, int playerUpdate)
     {
         currentCrossProgress += crossUpdate;
         currentPlayerProgress += playerUpdate;
@@ -52,6 +46,16 @@ public class ProgressBarScript : MonoBehaviour
         if (currentPlayerProgress >= maxProgress)
             return GameStateManager.gameState.GAMEOVERESCAPED;
         return GameStateManager.gameState.RUNNING;
+    }
+
+    public void Reset()
+    {
+        cross.Translate(-1 * currentCrossProgress * stepSize, 0, 0);
+        player.Translate(-1 * currentPlayerProgress * stepSize, 0, 0);
+        currentCrossProgress = 0;
+        currentPlayerProgress = 6;
+
+        Start();
     }
 
 }
